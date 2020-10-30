@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+:root{
+    font-family: Montserrat, Arial, sans-serif;
+
+    --app-main-color: navy;
+    --app-second-color: orange;
+    --app-menu-font-color: lightgrey;
+    --app-menu-font-color-hover: grey;
+}
+
+.loader{
+    display: none;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .navigation-container{
+        width: 100%;
+        position: fixed;
+        height: 50px;
+
+        .navigation{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            position: fixed;
+            justify-content: center;
+            transform: translateX(100%);
+            background-color: white;
+            overflow: hidden;
+
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    padding: 20px 0;
+                    color: gray;
+                }
+            }
+        }
+
+        .mobile-menu{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+            background-color: white;
+
+            .logo-app-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 10px;
+
+                .logo{
+                    width: 30px;
+                    height: 30px;
+                    background-color: navy;
+                    border-radius: 15px;
+                    margin-right: 15px;
+                }
+            }
+
+            .app-burger{
+                padding: 10px;
+            }
+        }
+
+        .nav-photos{
+            display: none;
+        }
+
+        .burger{
+            display: none;
+        }
+    }
+
+    .welcome-container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .left-side{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1{
+                margin-top: 20px;
+            }
+            p{
+                text-align: center;
+                margin-top: 20px;
+
+                &.join-us{
+                    width: fit-content;
+                    color: white;
+                    background-color: var(--app-main-color);
+                    padding: 10px 30px;
+                    border-radius: 25px;
+                }
+
+                &:nth-child(1){
+                    margin-top: 50px;
+                }
+            }
+        }
+
+        .right-side{
+            // display: none;
+            width: 100%;
+            height: 300px;
+            
+            .welcome-photo{
+                width: 100%;
+                height: 100%;
+                background-image: url('/MySchedule-landing-page/img/image0.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    .test-container{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-bottom: 50px;
+
+        .right-side{
+            .test-text{
+                p{
+                    width: 100%;
+                    padding: 10px 30px;
+                    background-color: orange;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        .left-side{
+            width: 100%;
+            height: 400px;
+
+            .test-image{
+                width: 100%;
+                height: 100%;
+                background-image: url('/MySchedule-landing-page/img/image1.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    .options-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .motto{
+            background-color: rgb(230,230,230);
+
+            p{
+                padding: 10px 30px;
+            }
+        }
+
+        .options{
+            margin-top: 50px;
+            .options-cont{
+                .option{
+                    background-color: orange;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    margin-bottom: 50px;
+
+                    .option-photo{
+                        width: 100%;
+                        height: 300px;
+                        background-image: url('/MySchedule-landing-page/img/image2.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+
+                    p{
+                        padding: 10px 30px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer{
+        width: 100%;
+        background-color: rgb(230,230,230);
+        .mobile-footer{
+            padding: 20px;
+            text-align: center;
+        }
+
+        ul{
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1366px){
+    .loader{
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        position: fixed;
+        z-index: 2;
+        text-align: center;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+    
+        .dot{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--app-main-color);
+        }
+    
+        .text-container{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            z-index: 1;
+    
+            .upper-txt-container{
+                overflow: hidden;
+            }
+    
+            .lower-txt-container{
+                text-align: right;
+                overflow: hidden;
+    
+                span{
+                    margin-top: 10px;
+                }
+            }
+    
+            span{
+                display: inline-block;
+                font-size: 25px;
+                color: white;
+            }
+        }
+    
+        .owner-container{
+            position: absolute;
+            top: 5vh;
+            left: calc(50% - 45vw + 30px);
+            height: 30px;
+    
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                text-transform: uppercase;
+                color: var(--app-main-color);
+            }
+        }
+    }
+
+    .wrapper{
+        display: unset;
+        width: 100vw;
+        max-width: 1920px;
+        margin: 0 auto;
+    
+        @mixin set-items-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        @mixin set-photo-properties {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        .navigation-container{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            z-index: 0;
+            overflow: hidden;
+            height: 100vh;
+    
+            .navigation, .nav-photos{
+                width: 50vw;
+                height: 100vh;
+                transform: translateX(200%);
+                position: unset;
+                overflow: unset;
+                align-items: center;
+                justify-content: flex-start;
+        
+                ul{
+                    list-style: none;
+                    width: unset;
+                    flex-direction: column;
+
+        
+                    li{
+                        display: unset;
+                        font-size: 25px;
+                        padding: 10px 20px;
+                        margin: 20px 40px;
+                        color: var(--app-menu-font-color);
+                        cursor: pointer;
+        
+                        &:hover{
+                            color: var(--app-menu-font-color-hover);
+                        }
+                    }
+                }
+            }
+        
+            .nav-photos{
+                @include set-photo-properties();
+
+                display: unset;
+                transform: translateX(-200%);
+                background-image: url("/MySchedule-landing-page/img/image0.jpg");
+                overflow: hidden;
+                position: relative;
+        
+                .photos-container{
+                    position: absolute;
+                    top: -100vh;
+                    left: 0;
+                    height: 500vh;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 200vh;
+                    
+        
+                    div{
+                        @include set-photo-properties();
+    
+                        height: 100vh;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+        
+                        &.photo1{
+                            background-image: url("/MySchedule-landing-page/img/image1.jpg");
+                        }
+                        &.photo2{
+                            background-image: url("/MySchedule-landing-page/img/image2.jpg");
+                        }
+                        &.photo3{
+                            background-image: url("/MySchedule-landing-page/img/image3.jpg");
+                        }
+                        &.photo4{
+                            background-image: url("/MySchedule-landing-page/img/image4.jpg");
+                        }
+                        &.photo5{
+                            background-image: url("/MySchedule-landing-page/img/image5.jpg");
+                        }
+                    }
+                }
+            }
+
+            .mobile-menu{
+                display: none;
+            }
+    
+            
+            .burger{
+                display: unset;
+                position: absolute;
+                top: 5vh;
+                right: 5vh;
+                padding: 10px 20px;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    
+        .welcome-container{
+            @include set-items-center();
+    
+            flex-direction: row;
+            width: 80%;
+            margin: 0 auto;
+            height: 100vh;
+            z-index: 1;
+    
+            .left-side{
+                width: 40%;
+                height: 40%;
+    
+                display: flex;
+                flex-direction: column;
+                align-items: unset;
+                justify-content: space-around;
+    
+                p{
+                    font-size: 20px;
+                    margin: 0;
+                    text-align: unset;
+                    width: 80%;
+    
+                    &.join-us{
+                        cursor: pointer;
+                    }
+
+                    &:nth-child(1){
+                        margin-top: 0;
+                    }
+                }
+    
+                h1{
+                    width: 100px;
+                    font-size: 60px;
+                    margin: 0;
+                }
+            }
+    
+            .right-side{
+                width: 40%;
+                height: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                position: relative;
+    
+                .noname{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 25%;
+                    background-color: var(--app-main-color);
+                }
+    
+                .welcome-photo{
+                    @include set-photo-properties();
+    
+                    width: 90%;
+                    height: 75%;
+                    z-index: 1;
+                    background-image: url('/MySchedule-landing-page/img/image0.jpg');
+                }
+            }
+        }
+    
+        .test-container{
+            margin-top: unset;
+            height: 70vh;
+            flex-direction: row;
+            justify-content: center;
+            text-align: unset;
+    
+            .left-side,.right-side{
+                display: flex;
+                width: 50%;
+                height: 100%;
+                position: relative;
+                margin-left: 10%;
+    
+                .test-image,.test-text{
+                    position: absolute;
+                    top: 5%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                }
+    
+                .test-image{
+                    @include set-photo-properties();
+    
+                    background-image: url('/MySchedule-landing-page/img//image2.jpg');
+                    height: 90%;
+                    width: 60%;
+                }
+    
+                .test-text{
+                    height: 90%;
+                    width: 60%;
+                    background-color: rgb(240,240,240);
+    
+                    p{
+                        padding: 20px;
+                        width: unset;
+                        font-size: 20px;
+                        background-color: unset;
+                        box-sizing: content-box;
+                    }
+                }
+    
+                .bottom{
+                    position: absolute;
+                    top: 0;
+                    left: 16%;
+                    width: 15%;
+                    background-color: var(--app-main-color);
+                    height: 100%;
+                }
+            }
+    
+            .right-side{
+                margin-left: unset;
+                margin-right: 10%;
+    
+                .bottom{
+                    left: unset;
+                    right: 16%;
+                }
+            }
+        }
+    
+        .options-container{
+            width: 100%;
+            box-sizing: border-box;
+    
+            .motto{
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                background-color: unset;
+    
+                p{
+                    margin: 30px auto;
+                    width: 80%;
+                    font-size: 25px;
+                    background-color: var(--app-second-color);
+                    padding: 10px 20px;
+                }
+            }
+    
+            .options{
+                width: 100%;
+                height: 90%;
+                overflow: hidden;
+                margin-top: unset;
+                
+                .options-cont{
+                    @include set-items-center();
+    
+                    flex-direction: row;
+                    width: 100%;
+                    height: 100%;
+
+                    .option{
+                        width: 20%;
+                        height: 60vh;
+                        margin: 0 25px;
+                        background-color: transparent;
+                        display: unset;
+                        margin-bottom: 0;
+        
+                        .option-photo{
+                            height: 90%;
+                            width: unset;
+                            background-image: unset;
+                            background-color: lightgray;
+                        }
+        
+                        p{
+                            height: 10%;
+                            display: flex;
+                            align-items: center;
+                            font-size: 15px;
+                            padding-left: 20px;
+                            text-align: unset;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .footer{
+            margin-top: 40px;
+            width: 100%;
+            border-top: 1px solid lightgray;
+            z-index: 1;
+            background-color: unset;
+
+            .mobile-footer{
+                display: none;
+            }
+    
+            ul{
+                display: unset;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                list-style: none;
+                padding: 40px;
+    
+                li{
+                    color: gray;
+                    padding: 10px 20px;
+                    cursor: pointer;
+    
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
