@@ -138,7 +138,7 @@ body{
             .welcome-photo{
                 width: 100%;
                 height: 100%;
-                background-image: url('/MySchedule-landing-page/img/image0.jpg');
+                background-image: url(../img/image0.jpg);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -172,7 +172,7 @@ body{
             .test-image{
                 width: 100%;
                 height: 100%;
-                background-image: url('/MySchedule-landing-page/img/image1.jpg');
+                background-image: url('../img/image1.jpg');
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -205,7 +205,7 @@ body{
                     .option-photo{
                         width: 100%;
                         height: 300px;
-                        background-image: url('/MySchedule-landing-page/img/image2.jpg');
+                        background-image: url('../img/image2.jpg');
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -350,10 +350,16 @@ body{
                     li{
                         display: unset;
                         font-size: 25px;
-                        padding: 10px 20px;
-                        margin: 20px 40px;
                         color: var(--app-menu-font-color);
                         cursor: pointer;
+                        margin: 20px 40px;
+
+                        a{
+                            display: block;
+                            text-decoration: unset;
+                            padding: 10px 20px 10px 0;
+                            color: var(--app-menu-font-color);
+                        }
         
                         &:hover{
                             color: var(--app-menu-font-color-hover);
@@ -367,7 +373,7 @@ body{
 
                 display: unset;
                 transform: translateX(-200%);
-                background-image: url("/MySchedule-landing-page/img/image0.jpg");
+                background-image: url("../img/image0.jpg");
                 overflow: hidden;
                 position: relative;
         
@@ -391,19 +397,19 @@ body{
                         flex-direction: column;
         
                         &.photo1{
-                            background-image: url("/MySchedule-landing-page/img/image1.jpg");
+                            background-image: url("../img/image1.jpg");
                         }
                         &.photo2{
-                            background-image: url("/MySchedule-landing-page/img/image2.jpg");
+                            background-image: url("../img/image2.jpg");
                         }
                         &.photo3{
-                            background-image: url("/MySchedule-landing-page/img/image3.jpg");
+                            background-image: url("../img/image3.jpg");
                         }
                         &.photo4{
-                            background-image: url("/MySchedule-landing-page/img/image4.jpg");
+                            background-image: url("../img/image4.jpg");
                         }
                         &.photo5{
-                            background-image: url("/MySchedule-landing-page/img/image5.jpg");
+                            background-image: url("../img/image5.jpg");
                         }
                     }
                 }
@@ -488,7 +494,7 @@ body{
                     width: 90%;
                     height: 75%;
                     z-index: 1;
-                    background-image: url('/MySchedule-landing-page/img/image0.jpg');
+                    background-image: url('../img/image0.jpg');
                 }
             }
         }
@@ -518,7 +524,7 @@ body{
                 .test-image{
                     @include set-photo-properties();
     
-                    background-image: url('/MySchedule-landing-page/img//image2.jpg');
+                    background-image: url('../img//image2.jpg');
                     height: 90%;
                     width: 60%;
                 }
