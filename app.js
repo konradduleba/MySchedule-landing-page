@@ -48,7 +48,7 @@ if (document.body.offsetWidth > 1025) {
     const lowertxt = gsap.from('.lower-txt', { duration: .5, y: -100, delay: 1 }, "text");
 
     let ownerText = gsap.timeline({ yoyo: true });
-    ownerText.to('.owner', { duration: 2, text: "Schedule App name", delay: .1 }).pause();
+    ownerText.to('.owner', { duration: 2, text: "Goal Scheduler", delay: .1 }).pause();
 
     let animateLogoDot = gsap.to(logoDot, {
         scale: 1,
@@ -56,7 +56,7 @@ if (document.body.offsetWidth > 1025) {
         y: '-45vh',
         duration: 0.7,
         ease: "power1.in",
-        delay: 3,
+        delay: 3.5,
         start: () => {
             uppertxt.reverse();
             lowertxt.reverse();

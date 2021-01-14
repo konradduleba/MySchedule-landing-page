@@ -235,7 +235,7 @@ body{
 }
 
 
-@media only screen and (min-width: 1366px){
+@media only screen and (min-width: 1000px){
     .loader{
         display: block;
         height: 100%;
@@ -331,6 +331,7 @@ body{
             z-index: 0;
             overflow: hidden;
             height: 100vh;
+            width: 100vw;
     
             .navigation, .nav-photos{
                 width: 50vw;
@@ -491,76 +492,24 @@ body{
                 .welcome-photo{
                     @include set-photo-properties();
     
+                    background-size: contain;
                     width: 90%;
                     height: 75%;
                     z-index: 1;
-                    background-image: url('../img/image0.jpg');
+                    background-image: url('../img/welcome_image.jpg');
                 }
             }
         }
     
-        .test-container{
-            margin-top: unset;
-            height: 70vh;
+        .about-app-section{
+            display: flex;
             flex-direction: row;
-            justify-content: center;
-            text-align: unset;
-    
-            .left-side,.right-side{
-                display: flex;
+
+            div{
                 width: 50%;
-                height: 100%;
-                position: relative;
-                margin-left: 10%;
-    
-                .test-image,.test-text{
-                    position: absolute;
-                    top: 5%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    z-index: 1;
-                }
-    
-                .test-image{
-                    @include set-photo-properties();
-    
-                    background-image: url('../img//image2.jpg');
-                    height: 90%;
-                    width: 60%;
-                }
-    
-                .test-text{
-                    height: 90%;
-                    width: 60%;
-                    background-color: rgb(240,240,240);
-    
-                    p{
-                        padding: 20px;
-                        width: unset;
-                        font-size: 20px;
-                        background-color: unset;
-                        box-sizing: content-box;
-                    }
-                }
-    
-                .bottom{
-                    position: absolute;
-                    top: 0;
-                    left: 16%;
-                    width: 15%;
-                    background-color: var(--app-main-color);
-                    height: 100%;
-                }
-            }
-    
-            .right-side{
-                margin-left: unset;
-                margin-right: 10%;
-    
-                .bottom{
-                    left: unset;
-                    right: 16%;
-                }
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
             }
         }
     
